@@ -13,8 +13,11 @@ class CreateConfigTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('config_type', function (Blueprint $table) {
+        Schema::create('config_types', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('description');
+            $table->integer('parent_id')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateConfigTypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('config_type');
+        Schema::dropIfExists('config_types');
     }
 }
