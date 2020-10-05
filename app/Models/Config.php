@@ -9,7 +9,13 @@ class Config extends Model
 {
     use HasFactory;
 
-    public function configType() {
-        return $this->belongsTo();
+    public function configType()
+    {
+        return $this->belongsTo('App\Models\ConfigType');
+    }
+
+    public function getConfigType()
+    {
+        return $this->hasOne('App\Models\ConfigType');
     }
 }

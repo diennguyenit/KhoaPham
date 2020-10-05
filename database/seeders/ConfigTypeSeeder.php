@@ -25,12 +25,12 @@ class ConfigTypeSeeder extends Seeder
                 'parent_id'=>null
             ],
             [
-                'name'=>'phone',
+                'name'=>'phone-contact',
                 'description'=>'Điện thoại liên hệ',
                 'parent_id'=>1
             ],
             [
-                'name'=>'email',
+                'name'=>'email-contact',
                 'description'=>'Email liên hệ',
                 'parent_id'=>1
             ]
